@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+  korean_jeju_dialect_speech:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    ports:
+      - "2004:8888"
+
+    volumes:
+      - '../:/workspace:rw'
+      - '~/.gitconfig:/root/.gitconfig:ro'
